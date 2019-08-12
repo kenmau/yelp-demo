@@ -3,7 +3,7 @@ pool:
   vmImage: 'macOS-10.14'
 
 variables:
-  scheme: ''
+  scheme: 'Yelp Demo'
   sdk: 'iphoneos'
   configuration: 'Release'
 
