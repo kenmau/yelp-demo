@@ -8,13 +8,14 @@ variables:
   configuration: 'Release'
 
 steps:
-- script: /usr/local/bin/pod install
-  displayName: 'pod install using a script'
 
 - task: CocoaPods@0
   inputs:
     forceRepoUpdate: true
   displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
+
+# - script: /usr/local/bin/pod install
+#   displayName: 'pod install using a script'
 
 - task: Xcode@5
   inputs:
