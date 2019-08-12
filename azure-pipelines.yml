@@ -25,7 +25,7 @@ steps:
     xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
     packageApp: false
-    xcWorkspacePath: '**/Yelp Demo/*.xcodeproj/project.xcworkspace'
+    xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
 
 # The `certSecureFile` and `provProfileSecureFile` files are uploaded to the Azure Pipelines secure files library where they are encrypted.
 # The `P12Password` variable is set in the Azure Pipelines pipeline editor and marked 'secret' to be encrypted.
