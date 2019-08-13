@@ -79,6 +79,13 @@ steps:
     targetFolder: '$(build.artifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'drop' 
+    publishLocation: 'filePath' # Options: container, filePath
+    targetPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)/'# Required when publishLocation == FilePath
+    #parallel: false # Optional
+    #parallelCount: # Optional
 
 # App Center distribute
 # Distribute app builds to testers and users via Visual Studio App Center
