@@ -7,7 +7,7 @@ variables:
   projectName: 'Yelp Demo'
   scheme: 'Yelp Demo'
   sdk: 'iphoneos'
-  configuration: 'Debug'
+  configuration: 'Release'
 
 steps:
 
