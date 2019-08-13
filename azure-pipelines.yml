@@ -4,7 +4,7 @@ pool:
   # vmImage: 'macOS-latest'
 
 variables:
-  projectName: 'Yelp\ Demo'
+  projectName: 'Yelp\\ Demo'
   scheme: 'Yelp Demo'
   sdk: 'iphoneos'
   configuration: 'Release'
