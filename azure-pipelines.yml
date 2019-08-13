@@ -49,7 +49,7 @@ steps:
     signingOption: 'manual'
     
     # args: 'PROVISIONING_PROFILE=edaa3024-18ee-4a97-ba57-772ce08b5677'
-    provisioningProfileName: 'Yelp Demo'
+    provisioningProfileName: 'Yelp Demo Poc'
     # Development Provisioning Profile UUID
     # provisioningProfileUuid: '1e5c3bb1-37c9-41a6-a4cb-fb3b14f54fb1'
     # Distribution Provisioning Profile UUID
