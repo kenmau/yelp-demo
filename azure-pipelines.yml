@@ -21,10 +21,10 @@ steps:
 
 # The `certSecureFile` and `provProfileSecureFile` files are uploaded to the Azure Pipelines secure files library where they are encrypted.
 # The `P12Password` variable is set in the Azure Pipelines pipeline editor and marked 'secret' to be encrypted.
-- task: InstallAppleCertificate@2
-  inputs:
-    certSecureFile: 'RBC-Dominion-Securities-Inc-Distribution-Signing-Cert.p12'
-    certPwd: $(P12Password)
+# - task: InstallAppleCertificate@2
+#   inputs:
+#     certSecureFile: 'RBC-Dominion-Securities-Inc-Distribution-Signing-Cert.p12'
+#     certPwd: $(P12Password)
 
 - task: InstallAppleProvisioningProfile@1
   inputs:
