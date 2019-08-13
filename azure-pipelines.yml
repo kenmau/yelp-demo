@@ -4,7 +4,7 @@ pool:
   # vmImage: 'macOS-latest'
 
 variables:
-  projectName: 'Yelp\\ Demo'
+  projectName: 'Yelp Demo'
   scheme: 'Yelp Demo'
   sdk: 'iphoneos'
   configuration: 'Release'
@@ -37,14 +37,15 @@ steps:
   inputs:
     actions: 'build'
     sdk: '$(sdk)'
-    scheme: '$(scheme)'
+    scheme: 'Yelp\ Demo'
     configuration: '$(configuration)'
     xcodeVersion: '10' # Options: default, 10, 9, 8, specifyPath
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
     archivePath: '$(agent.buildDirectory)/output/archive/'
     packageApp: true
     # xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
-    xcWorkspacePath: '**/$(projectName).xcworkspace'
+    # xcWorkspacePath: '**/$(projectName).xcworkspace'
+    xcWorkspacePath: '**/Yelp\ Demo.xcworkspace'
     useXcpretty: false
     signingOption: 'manual'
     
