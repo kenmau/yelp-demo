@@ -1,7 +1,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/xcode
 pool:
-  # vmImage: 'macOS-10.14'
-  vmImage: 'macOS-latest'
+  vmImage: 'macOS-10.14'
+  # vmImage: 'macOS-latest'
 
 variables:
   projectName: 'Yelp Demo'
@@ -13,7 +13,7 @@ steps:
 
 - task: CocoaPods@0
   inputs:
-    forceRepoUpdate: true
+    forceRepoUpdate: false
   displayName: 'pod install using the CocoaPods task with a forced repo update and a custom project directory'
 
 # - script: /usr/local/bin/pod install
@@ -38,7 +38,7 @@ steps:
     sdk: '$(sdk)'
     scheme: '$(scheme)'
     configuration: '$(configuration)'
-    xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
+    xcodeVersion: '10' # Options: default, 10, 9, 8, specifyPath
     # exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
     # packageApp: false
     # xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
