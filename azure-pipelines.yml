@@ -23,7 +23,7 @@ steps:
 # The `P12Password` variable is set in the Azure Pipelines pipeline editor and marked 'secret' to be encrypted.
 - task: InstallAppleCertificate@2
   inputs:
-    certSecureFile: 'RBC-Dominion-Securities-Inc-Distribution-Signing-Cert.p12'
+    certSecureFile: 'ken-developer.p12'
     certPwd: $(P12Password)
 
 - task: InstallAppleProvisioningProfile@1
