@@ -56,8 +56,6 @@ steps:
     provisioningProfileUuid: 'edaa3024-18ee-4a97-ba57-772ce08b5677'
     teamId: '8KLLEZRH9Y'
 
-
-
 # - task: Xcode@5
 #   inputs:
 #     actions: 'build'
