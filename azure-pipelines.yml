@@ -45,7 +45,7 @@ steps:
     exportOptions: 'plist' # Optional. Options: auto, plist, specify
     #exportMethod: 'development' # Required when exportOptions == Specify
     #exportTeamId: # Optional
-    exportOptionsPlist: '**/exportOptions.plist' # Required when exportOptions == Plist
+    exportOptionsPlist: 'exportOptions.plist' # Required when exportOptions == Plist
     #exportArgs: # Optional
     archivePath: '$(agent.buildDirectory)/output/archive/'
     packageApp: true
