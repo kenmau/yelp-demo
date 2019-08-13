@@ -14,7 +14,7 @@
     <string>manual</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>com.kenmau.yelp-demo-poc</key>
+        <key>com.kenmau.Yelp-Demo-Poc</key>
         <string>Yelp Demo Poc</string>
     </dict>
     <key>stripSwiftSymbols</key>
