@@ -93,9 +93,9 @@ steps:
     #symbolsDsymFiles: # Optional
     #symbolsMappingTxtFile: # Optional
     #symbolsIncludeParentDirectory: # Optional
-    #releaseNotesOption: 'input' # Options: input, file
-    #releaseNotesInput: # Required when releaseNotesOption == Input
+    releaseNotesOption: 'input' # Options: input, file
     #releaseNotesFile: # Required when releaseNotesOption == File
+    releaseNotesInput: 'Test'# Required when releaseNotesOption == Input
     #isMandatory: false # Optional
     #destinationType: 'groups' # Options: groups, store
     #distributionGroupId: # Optional
