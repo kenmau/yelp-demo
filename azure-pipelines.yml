@@ -29,7 +29,8 @@ steps:
 - task: InstallAppleProvisioningProfile@1
   inputs:
     provisioningProfileLocation: 'secureFiles'
-    provProfileSecureFile: 'Yelp_Demo_Poc.mobileprovision'
+    provProfileSecureFile: 'Yelp_Demo_Poc_Development_Profile.mobileprovision'
+    # removeProfile: true
     
 - task: Xcode@5
   inputs:
@@ -43,7 +44,7 @@ steps:
     # xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcWorkspacePath: '**/$(projectName).xcworkspace'
     useXcpretty: false
-    signingOption: 'auto'
+    signingOption: 'default'
 
 
 
