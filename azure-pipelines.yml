@@ -43,7 +43,7 @@ steps:
     # xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcWorkspacePath: '**/$(projectName).xcworkspace'
     useXcpretty: false
-    signingOption: 'default'
+    signingOption: 'auto'
 
 
 
