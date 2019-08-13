@@ -33,13 +33,14 @@ steps:
     # provProfileSecureFile: 'Yelp_Demo_Poc_Development_Profile.mobileprovision'
     removeProfile: true
     
-- task: Xcode@5
+- task: Xcode@4
   inputs:
     actions: 'build'
     sdk: '$(sdk)'
     scheme: 'Yelp Demo'
     configuration: '$(configuration)'
-    xcodeVersion: '10' # Options: default, 10, 9, 8, specifyPath
+    xcodeVersion: 'default'
+    # Options: default, 10, 9, 8, specifyPath
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
     archivePath: '$(agent.buildDirectory)/output/archive/'
     packageApp: true
@@ -48,7 +49,6 @@ steps:
     xcWorkspacePath: '**/Yelp\ Demo.xcworkspace'
     useXcpretty: false
     signingOption: 'manual'
-    
     # args: 'PROVISIONING_PROFILE=edaa3024-18ee-4a97-ba57-772ce08b5677'
     provisioningProfileName: 'Yelp Demo Poc'
     # Development Provisioning Profile UUID
