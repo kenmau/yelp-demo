@@ -20,25 +20,28 @@ steps:
 
 - task: Xcode@5
   inputs:
+    actions: 'build'
     sdk: '$(sdk)'
     scheme: '$(scheme)'
     configuration: '$(configuration)'
     xcodeVersion: 'default' # Options: default, 10, 9, 8, specifyPath
-    exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
-    packageApp: false
+    # exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
+    # packageApp: false
     # xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcWorkspacePath: '**/$(projectName).xcworkspace'
+    useXcpretty: false
+    signingOption: 'default'
 
 # The `certSecureFile` and `provProfileSecureFile` files are uploaded to the Azure Pipelines secure files library where they are encrypted.
 # The `P12Password` variable is set in the Azure Pipelines pipeline editor and marked 'secret' to be encrypted.
-# - task: InstallAppleCertificate@2
-#   inputs:
-#     certSecureFile: 'RBC-Dominion-Securities-Inc-Distribution-Signing-Cert.p12'
-#     certPwd: $(P12Password)
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'RBC-Dominion-Securities-Inc-Distribution-Signing-Cert.p12'
+    certPwd: $(P12Password)
 
-# - task: InstallAppleProvisioningProfile@1
-#   inputs:
-#     provProfileSecureFile: 'Yelp_Demo_Poc.mobileprovision'
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provProfileSecureFile: 'Yelp_Demo_Poc.mobileprovision'
 
 # - task: Xcode@5
 #   inputs:
