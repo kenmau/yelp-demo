@@ -43,7 +43,7 @@ steps:
     # packageApp: false
     # xcWorkspacePath: '**/*.xcodeproj/project.xcworkspace'
     xcWorkspacePath: '**/$(projectName).xcworkspace'
-    useXcpretty: true
+    useXcpretty: false
     signingOption: 'default'
     provisioningProfileName: 'Yelp Demo Poc'
     provisioningProfileUuid: 'edaa3024-18ee-4a97-ba57-772ce08b5677'
