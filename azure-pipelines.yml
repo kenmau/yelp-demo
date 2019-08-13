@@ -33,9 +33,9 @@ steps:
     # provProfileSecureFile: 'Yelp_Demo_Poc_Development_Profile.mobileprovision'
     removeProfile: true
     
-- task: Xcode@4
+- task: Xcode@5
   inputs:
-    actions: 'build'
+    actions: 'archive'
     sdk: '$(sdk)'
     scheme: 'Yelp Demo'
     configuration: '$(configuration)'
