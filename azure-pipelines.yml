@@ -67,7 +67,7 @@ steps:
 # Distribute app builds to testers and users via Visual Studio App Center
 - task: AppCenterDistribute@3
   inputs:
-    serverEndpoint: 'AppCenter'
+    serverEndpoint: 'App Center'
     appSlug: 'ken_mau/Yelp-Demo-Poc'
     appFile: '**/*.ipa'
     #symbolsOption: 'Apple' # Optional. Options: apple, android
