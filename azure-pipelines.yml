@@ -75,7 +75,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    contents: '$(agent.buildDirectory)/output/archive/*.ipa'
+    contents: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)/*.ipa'
     targetFolder: '$(build.artifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
@@ -86,7 +86,7 @@ steps:
   inputs:
     serverEndpoint: 'App Center'
     appSlug: 'ken_mau/Yelp-Demo-Poc'
-    appFile: '$(agent.buildDirectory)/output/archive/*.ipa'
+    appFile: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)/*.ipa'
     #symbolsOption: 'Apple' # Optional. Options: apple, android
     #symbolsPath: # Optional
     #symbolsPdbFiles: '**/*.pdb' # Optional
