@@ -37,7 +37,7 @@ steps:
   inputs:
     actions: 'build'
     sdk: '$(sdk)'
-    scheme: 'Yelp\ Demo'
+    scheme: 'Yelp Demo'
     configuration: '$(configuration)'
     xcodeVersion: '10' # Options: default, 10, 9, 8, specifyPath
     exportPath: '$(agent.buildDirectory)/output/$(sdk)/$(configuration)'
